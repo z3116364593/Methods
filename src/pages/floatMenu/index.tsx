@@ -34,7 +34,7 @@ const FloatMenu = () => {
         }
     }, [])
 
-    //三击
+    //三击 设定指定位置
     const threeStrikes = (e: any) => {
         clearTimeout(strikes.threeStrikesTimer)
         strikes.threeStrikesTimer = null

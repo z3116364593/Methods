@@ -3,17 +3,17 @@ import { lazy } from 'react';
 
 export default [
     {
-        path:"/swiper" ,
+        path:"/swiper",
         component: lazy(() => import('../pages/swiper')),
         exact: true
     },
     {
-        path:"/backTop" ,
+        path:"/backTop",
         component: lazy(() => import('../pages/scroll')),
         exact: true
     },
     {
-        path:"/floatMenu" ,
+        path:"/floatMenu",
         component: lazy(() => import('../pages/floatMenu')),
         exact: true
     },

@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import './App.css';
 import { Route, HashRouter, Redirect } from 'react-router-dom'
 import route from './router/index'
+import List from './commponents/list/index'
 
 function App() {
   return (
