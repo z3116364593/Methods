@@ -1,0 +1,79 @@
+:root {
+  --width: 500px;
+  --height: 280px;
+}
+
+.jk-swiper {
+  width: var(--width);
+  height: var(--height);
+  overflow: hidden;
+  position: relative;
+}
+
+.jk-swiper > ul {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: var(--width);
+  height: var(--height);
+  list-style: none;
+  display: flex;
+}
+
+.jk-swiper > ul > li {
+  width: var(--width);
+  height: var(--height);
+}
+
+.jk-swiper > ul > li > img {
+  width: var(--width);
+  height: var(--height);
+}
+
+.jk-swiper > p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  opacity: 0;
+  transition: all .4s;
+  cursor: pointer;
+}
+
+.jk-swiper > p:nth-of-type(1) {
+  left: 20px;
+}
+
+.jk-swiper > p:nth-of-type(2) {
+  right: 20px;
+}
+
+.jk-swiper:hover > p {
+  opacity: 1;
+}
+
+.jk-dot {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  z-index: 1000;
+  transform: translateX(-50%);
+}
+
+.jk-dot > span {
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  margin-right: 10px;
+}
+
+.jk-dot > span:nth-last-child(1) {
+  margin-right: 0;
+}

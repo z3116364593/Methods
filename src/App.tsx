@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Suspense } from 'react';
 import './App.css';
+import { Route, HashRouter, Redirect } from 'react-router-dom'
+import route from './router/index'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Suspense fallback={<div></div>}>
+        <HashRouter>
+          {
+            route.map((item: any, index: number) => {
+              return (
+                <Route exact={item.exact} path={item.path} component={item.component} key={index}></Route>
+              )
+            })
+          }
+          <Redirect to="/floatMenu"></Redirect>
+        </HashRouter>
+      </Suspense>
     </div>
   );
 }
